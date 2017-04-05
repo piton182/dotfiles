@@ -5,6 +5,9 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
+" set cursorline
+" set cursorcolumn
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -34,6 +37,12 @@ Plugin 'zcodes/vim-colors-basic'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+
+Plugin 'mileszs/ack.vim'
+
+Plugin 'tpope/vim-fugitive'
+
+Plugin 'tpope/vim-git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -68,4 +77,9 @@ set relativenumber
 " leader
 let mapleader = ","
 
-nmap <leader>r :call VimuxRunCommand("pulp run")<cr>
+map <leader>q :q<cr>
+
+" pulp
+nmap <leader>pr :call VimuxRunCommand("pulp run")<cr>
+nmap <leader>pb :call VimuxRunCommand("pulp build")<cr>
+
