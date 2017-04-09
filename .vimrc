@@ -5,9 +5,6 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
-" set cursorline
-" set cursorcolumn
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -38,11 +35,20 @@ Plugin 'zcodes/vim-colors-basic'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+Plugin 'edkolev/tmuxline.vim'
+
+" REMINDER! brew install ack
 Plugin 'mileszs/ack.vim'
 
-Plugin 'tpope/vim-fugitive'
-
-Plugin 'tpope/vim-git'
+Plugin 'vim-scripts/LustyExplorer'
+"
+" You are running with 'hidden' mode off.  LustyExplorer may                                      
+" sometimes emit error messages in this mode -- you should turn
+" it on, like so:
+"   :set hidden
+"
+" Even better, put this in your .vimrc file.
+set hidden
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -69,17 +75,34 @@ map <C-t> :NERDTreeToggle<CR>
 " How can I close vim if the only window left open is a NERDTree?
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-syntax on
-
+" Solarized theme
+syntax enable
 set background=dark
+
 set relativenumber
 
 " leader
 let mapleader = ","
 
-map <leader>q :q<cr>
+" mappings
+nmap <leader>r :call VimuxRunCommand("pulp run")<cr>
+nmap <leader>f :Ack! ""<Left>
+nmap <leader>F :Ack! <C-r><C-w><cr>
+nmap <leader>q :q<cr>
+nmap <leader>s :w<cr>
+nmap <leader>m :bprevious<cr>
+nmap <leader>n :bnext<cr>
+" use hjkl for jumping between splits
+nmap <leader>h <C-w>h
+nmap <leader>j <C-w>j
+nmap <leader>k <C-w>k
+nmap <leader>l <C-w>l
+nmap <leader>/ :LustyBufferGrep<cr>
 
-" pulp
-nmap <leader>pr :call VimuxRunCommand("pulp run")<cr>
-nmap <leader>pb :call VimuxRunCommand("pulp build")<cr>
+colorscheme solarized
+
+" airline
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'light'
+let g:airline#extensions#tabline#enabled = 1
 
