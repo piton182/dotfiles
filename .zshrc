@@ -9,7 +9,7 @@ export ZSH=/Users/dmitry/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -53,8 +53,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-plugins=(zsh-autosuggestions)
+plugins=(git zsh-autosuggestions vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,3 +88,17 @@ source $ZSH/oh-my-zsh.sh
 DEFAULT_USER=dmitry
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs vi_mode)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
+
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_SHORTEN_DELIMITER=""
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
+
+POWERLEVEL9K_VI_INSERT_MODE_STRING="i"
+POWERLEVEL9K_VI_COMMAND_MODE_STRING="n"
+POWERLEVEL9K_VI_MODE_NORMAL_BACKGROUND="046"
+POWERLEVEL9K_VI_MODE_NORMAL_FOREGROUND="black"
+# POWERLEVEL9K_VI_MODE_INSERT_BACKGROUND="blue"
+POWERLEVEL9K_VI_MODE_INSERT_FOREGROUND="blue"
