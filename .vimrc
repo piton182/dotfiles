@@ -89,14 +89,9 @@ nmap <leader>r :call VimuxRunCommand("pulp run")<cr>
 nmap <leader>f :Ack! ""<Left>
 nmap <leader>F :Ack! <C-r><C-w><cr>
 nmap <leader>q :q<cr>
-nmap <leader>s :w<cr>
+nmap <leader>w :w<cr>
 nmap <leader>m :bprevious<cr>
-nmap <leader>n :bnext<cr>
-" use hjkl for jumping between splits
-nmap <leader>h <C-w>h
-nmap <leader>j <C-w>j
-nmap <leader>k <C-w>k
-nmap <leader>l <C-w>l
+nmap <leader>. :bnext<cr>
 nmap <leader>/ :LustyBufferGrep<cr>
 
 colorscheme solarized
@@ -105,4 +100,6 @@ colorscheme solarized
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'light'
 let g:airline#extensions#tabline#enabled = 1
+
+source .keymap.colemak.vim
 
