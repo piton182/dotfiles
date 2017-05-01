@@ -40,7 +40,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'edkolev/tmuxline.vim'
 
 " REMINDER! brew install ack
-Plugin 'mileszs/ack.vim'
+Plugin 'dyng/ctrlsf.vim'
 
 Plugin 'vim-scripts/LustyExplorer'
 "
@@ -88,13 +88,15 @@ let mapleader = ","
 
 " mappings
 nmap <leader>r :call VimuxRunCommand("pulp run")<cr>
-nmap <leader>f :Ack! ""<Left>
-nmap <leader>F :Ack! <C-r><C-w><cr>
 nmap <leader>q :q<cr>
 nmap <leader>w :w<cr>
 nmap <leader>m :bprevious<cr>
 nmap <leader>. :bnext<cr>
 nmap <leader>/ :LustyBufferGrep<cr>
+
+" mappings for seaching stuff
+nmap <leader>F :CtrlSF 
+nmap <leader>f :CtrlSF <C-R>0<cr>
 
 colorscheme solarized
 
