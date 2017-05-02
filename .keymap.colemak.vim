@@ -14,5 +14,5 @@ noremap f e
 noremap n j
 noremap e k
 noremap i l
-noremap j <nop>
-noremap k <nop>
+" noremap j <nop>
+" noremap k <nop>

@@ -7,6 +7,8 @@ set softtabstop=2
 
 set hlsearch
 
+set directory=$HOME/.vim/swapfiles//
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -104,4 +106,7 @@ colorscheme solarized
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'light'
 let g:airline#extensions#tabline#enabled = 1
+
+" Colemak
+source ~/.dotfiles/.keymap.colemak.vim
 
