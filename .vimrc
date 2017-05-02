@@ -54,6 +54,10 @@ Plugin 'vim-scripts/LustyExplorer'
 " Even better, put this in your .vimrc file.
 set hidden
 
+Plugin 'tpope/vim-fugitive'
+
+Plugin 'airblade/vim-gitgutter'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -108,5 +112,5 @@ let g:airline_theme = 'light'
 let g:airline#extensions#tabline#enabled = 1
 
 " Colemak
-source ~/.dotfiles/.keymap.colemak.vim
+source ~/.dotfiles/.keymap.qwerty.vim
 
